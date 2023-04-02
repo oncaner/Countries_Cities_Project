@@ -1,6 +1,10 @@
 package enoca.enocaExample.service;
 
-import enoca.enocaExample.dto.requests.*;
+import enoca.enocaExample.dto.requests.CreateCountryRequest;
+import enoca.enocaExample.dto.requests.UpdateCountryByContinentRequest;
+import enoca.enocaExample.dto.requests.UpdateCountryByNameRequest;
+import enoca.enocaExample.dto.requests.UpdateCountryByPopulationRequest;
+import enoca.enocaExample.dto.requests.UpdateCountryRequest;
 import enoca.enocaExample.dto.responses.GetAllCountriesResponse;
 import enoca.enocaExample.dto.responses.GetByIdCountryResponse;
 import enoca.enocaExample.model.Country;

@@ -1,6 +1,10 @@
 package enoca.enocaExample.service;
 
-import enoca.enocaExample.dto.requests.*;
+import enoca.enocaExample.dto.requests.CreateCityRequest;
+import enoca.enocaExample.dto.requests.UpdateCityByNameRequest;
+import enoca.enocaExample.dto.requests.UpdateCityByPopulationRequest;
+import enoca.enocaExample.dto.requests.UpdateCityByRegionRequest;
+import enoca.enocaExample.dto.requests.UpdateCityRequest;
 import enoca.enocaExample.dto.responses.GetAllCitiesResponse;
 import enoca.enocaExample.dto.responses.GetByIdCityResponse;
 import enoca.enocaExample.model.City;
