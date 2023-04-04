@@ -82,9 +82,9 @@ Request Body -> (Required)
 Response Body -> Response Status: 201 - CREATED
 
   {
-  "name": "string",
-  "continent": "string",
-  "population": 0
+    "name": "string",
+    "continent": "string",
+    "population": 0
   }
 ```
 
@@ -118,9 +118,9 @@ Request Body -> (Required)
 Response Body -> Response Status: 200 - OK
 
   {
-  "name": "string",
-  "continent": "string",
-  "population": 0
+    "name": "string",
+    "continent": "string",
+    "population": 0
   }
 ```
 
@@ -135,9 +135,9 @@ Request Body -> (Required)
 Response Body -> Response Status: 200 - OK
 
   {
-  "name": "string",
-  "continent": "string",
-  "population": 0
+    "name": "string",
+    "continent": "string",
+    "population": 0
   }
 ```
 
@@ -152,9 +152,9 @@ Request Body -> (Required)
 Response Body -> Response Status: 200 - OK
 
   {
-  "name": "string",
-  "continent": "string",
-  "population": 0
+    "name": "string",
+    "continent": "string",
+    "population": 0
   }
 ```
 
@@ -218,10 +218,10 @@ Request Body -> (Required)
 Response Body -> Response Status: 201 - CREATED
 
   {
-  "name": "string",
-  "population": 0,
-  "region": "string",
-  "countryName": "string"
+    "name": "string",
+    "population": 0,
+    "region": "string",
+    "countryName": "string"
   }
 ```
 
@@ -238,15 +238,15 @@ Request Body -> (Required)
 Response Body -> Response Status: 200 - OK
 
   {
-  "name": "string",
-  "population": 0,
-  "region": "string",
-  "countryName": "string"
+    "name": "string",
+    "population": 0,
+    "region": "string",
+    "countryName": "string"
   }
 ```
 
 ```
-Request -> PUT - URL: http://localhost:8080/api/cities/update/by-name (Name'ye göre City günceller.)
+Request -> PATCH - URL: http://localhost:8080/api/cities/update/by-name (Name'ye göre City günceller.)
 Request Body -> (Required)
   {
     "id": 0,
@@ -256,15 +256,15 @@ Request Body -> (Required)
 Response Body -> Response Status: 200 - OK
 
   {
-  "name": "string",
-  "population": 0,
-  "region": "string",
-  "countryName": "string"
+    "name": "string",
+    "population": 0,
+    "region": "string",
+    "countryName": "string"
   }
 ```
 
 ```
-Request -> PUT - URL: http://localhost:8080/api/cities/update/by-population (Population'a göre City günceller.)
+Request -> PATCH - URL: http://localhost:8080/api/cities/update/by-population (Population'a göre City günceller.)
 Request Body -> (Required)
   {
     "id": 0,
@@ -274,15 +274,15 @@ Request Body -> (Required)
 Response Body -> Response Status: 200 - OK
 
   {
-  "name": "string",
-  "population": 0,
-  "region": "string",
-  "countryName": "string"
+    "name": "string",
+    "population": 0,
+    "region": "string",
+    "countryName": "string"
   }
 ```
 
 ```
-Request -> PUT - URL: http://localhost:8080/api/cities/update/by-region (Region'a göre City günceller.)
+Request -> PATCH - URL: http://localhost:8080/api/cities/update/by-region (Region'a göre City günceller.)
 Request Body -> (Required)
   {
     "id": 0,
@@ -292,10 +292,10 @@ Request Body -> (Required)
 Response Body -> Response Status: 200 - OK
 
   {
-  "name": "string",
-  "population": 0,
-  "region": "string",
-  "countryName": "string"
+    "name": "string",
+    "population": 0,
+    "region": "string",
+    "countryName": "string"
   }
 ```
 
@@ -318,9 +318,9 @@ Request -> PUT & PATCH & GET(ById) & DELETE
 Eğer mevcut bir CountryId'ye sahip data yok ise "CountryNotFoundException" fırlatır.
 
 Response Body -> Response Status: 400 - BAD REQUEST
-{
-  "message": "Country not found with: {id}"
-}
+  {
+    "message": "Country not found with: {id}"
+  }
 
 ```
 
@@ -332,8 +332,8 @@ Request -> PUT & PATCH & GET(ById) & DELETE
 Eğer mevcut bir CityId'ye sahip data yok ise "CityNotFoundException" fırlatır.
 
 Response Body -> Response Status: 400 - BAD REQUEST
-{
-  "message": "City not found with: {id}"
-}
+  {
+    "message": "City not found with: {id}"
+  }
 
 ```
