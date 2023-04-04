@@ -43,18 +43,22 @@ Spring Data (Jpa)
 Request -> GET - URL: http://localhost:8080/api/countries (Tüm Country'leri getirir.)
 
 Response Body -> Response Status: 200 - OK
-[
-  {
-    "id": 0,
-    "name": "string",
-    "continent": "string",
-    "population": 0
-  }
-]
+  [
+    {
+      "id": 0,
+      "name": "string",
+      "continent": "string",
+      "population": 0
+    }
+  ]
 ```
 
 ```
 Request -> GET - URL: http://localhost:8080/api/countries/{id} (Id'ye göre Country getirir.)
+Request Body -> (Required)
+  {
+    "id": 0
+  }
 
 Response Body -> Response Status: 200 - OK
 
@@ -69,107 +73,97 @@ Response Body -> Response Status: 200 - OK
 ```
 Request -> POST - URL: http://localhost:8080/api/countries/create (Country oluşturur.)
 Request Body -> (Required)
-{
-  "name": "string",
-  "continent": "string",
-  "population": 0
-}
+  {
+    "name": "string",
+    "continent": "string",
+    "population": 0
+  }
 
 Response Body -> Response Status: 201 - CREATED
 
   {
-    "id": 0,
-    "name": "string",
-    "continent": "string",
-    "population": 0,
-    "cities": null
+  "name": "string",
+  "continent": "string",
+  "population": 0
   }
 ```
 
 ```
 Request -> PUT - URL: http://localhost:8080/api/countries/update (Id'ye göre Country günceller.)
 Request Body -> (Required)
-{
-  "id": 0,
-  "name": "string",
-  "continent": "string",
-  "population": 0
-}
-
-Response Body -> Response Status: 200 - OK
-
   {
     "id": 0,
     "name": "string",
     "continent": "string",
-    "population": 0,
-    "cities": null
+    "population": 0
+  }
+
+Response Body -> Response Status: 200 - OK
+
+  {
+    "name": "string",
+    "continent": "string",
+    "population": 0
   }
 ```
 
 ```
 Request -> PATCH - URL: http://localhost:8080/api/countries/update/by-name (Name'ye göre Country günceller.)
 Request Body -> (Required)
-{
-  "id": 0,
-  "name": "string"
-}
+  {
+    "id": 0,
+    "name": "string"
+  }
 
 Response Body -> Response Status: 200 - OK
 
   {
-  "id": 0,
   "name": "string",
   "continent": "string",
-  "population": 0,
-  "cities": []
-}
+  "population": 0
+  }
 ```
 
 ```
 Request -> PATCH - URL: http://localhost:8080/api/countries/update/by-continent (Continent'e göre Country günceller.)
 Request Body -> (Required)
-{
-  "id": 0,
-  "continent": "string"
-}
+  {
+    "id": 0,
+    "continent": "string"
+  }
 
 Response Body -> Response Status: 200 - OK
 
   {
-  "id": 0,
   "name": "string",
   "continent": "string",
-  "population": 0,
-  "cities": []
-}
+  "population": 0
+  }
 ```
 
 ```
 Request -> PATCH - URL: http://localhost:8080/api/countries/update/by-population (Population'a göre Country günceller.)
 Request Body -> (Required)
-{
-  "id": 0,
-  "population": 0
-}
+  {
+    "id": 0,
+    "population": 0
+  }
 
 Response Body -> Response Status: 200 - OK
 
   {
-  "id": 0,
   "name": "string",
   "continent": "string",
-  "population": 0,
-  "cities": []
-}
+  "population": 0
+  }
 ```
 
 ```
 Request -> DELETE - URL: http://localhost:8080/api/countries/delete/{id} (Id'ye göre Country siler.)
 Request Body -> (Required)
-{
-  "id": 0,
-}
+  {
+    "id": 0,
+  }
 
 Response Body -> Response Status: 200 - OK
 
@@ -181,132 +175,136 @@ Response Body -> Response Status: 200 - OK
 Request -> GET - URL: http://localhost:8080/api/cities (Tüm City'leri getirir.)
 
 Response Body -> Response Status: 200 - OK
-[
-  {
-    "id": 0,
-    "name": "string",
-    "population": 0,
-    "region": "string",
-    "countryName": "string"
-  }
-]
+  [
+    {
+      "id": 0,
+      "name": "string",
+      "population": 0,
+      "region": "string",
+      "countryName": "string"
+    }
+  ]
 ```
 
 ```
 Request -> GET - URL: http://localhost:8080/api/cities/{id} (Id'ye göre City getirir.)
+Request Body -> (Required)
+  {
+    "id": 0
+  }
 
 Response Body -> Response Status: 200 - OK
-[
-  {
-    "id": 0,
-    "name": "string",
-    "population": 0,
-    "region": "string",
-    "countryName": "string"
-  }
-]
+  [
+    {
+      "id": 0,
+      "name": "string",
+      "population": 0,
+      "region": "string",
+      "countryName": "string"
+    }
+  ]
 ```
 
 ```
 Request -> POST - URL: http://localhost:8080/api/cities/create (City oluşturur.)
 Request Body -> (Required)
-{
-  "name": "string",
-  "population": 0,
-  "region": "string",
-  "countryId": 0
-}
+  {
+    "name": "string",
+    "population": 0,
+    "region": "string",
+    "countryId": 0
+  }
 
 Response Body -> Response Status: 201 - CREATED
 
   {
-  "id": 0,
   "name": "string",
   "population": 0,
-  "region": "string"
+  "region": "string",
+  "countryName": "string"
   }
 ```
 
 ```
 Request -> PUT - URL: http://localhost:8080/api/cities/update (Id'ye göre City günceller.)
 Request Body -> (Required)
-{
-  "id": 0,
-  "name": "string",
-  "population": 0,
-  "region": "string"
-}
+  {
+    "id": 0,
+    "name": "string",
+    "population": 0,
+    "region": "string"
+  }
 
 Response Body -> Response Status: 200 - OK
 
   {
-  "id": 0,
   "name": "string",
   "population": 0,
-  "region": "string"
+  "region": "string",
+  "countryName": "string"
   }
 ```
 
 ```
 Request -> PUT - URL: http://localhost:8080/api/cities/update/by-name (Name'ye göre City günceller.)
 Request Body -> (Required)
-{
-  "id": 0,
-  "name": "string"
-}
+  {
+    "id": 0,
+    "name": "string"
+  }
 
 Response Body -> Response Status: 200 - OK
 
   {
-  "id": 0,
   "name": "string",
   "population": 0,
-  "region": "string"
+  "region": "string",
+  "countryName": "string"
   }
 ```
 
 ```
 Request -> PUT - URL: http://localhost:8080/api/cities/update/by-population (Population'a göre City günceller.)
 Request Body -> (Required)
-{
-  "id": 0,
-  "population": 0
-}
+  {
+    "id": 0,
+    "population": 0
+  }
 
 Response Body -> Response Status: 200 - OK
 
   {
-  "id": 0,
   "name": "string",
   "population": 0,
-  "region": "string"
+  "region": "string",
+  "countryName": "string"
   }
 ```
 
 ```
 Request -> PUT - URL: http://localhost:8080/api/cities/update/by-region (Region'a göre City günceller.)
 Request Body -> (Required)
-{
-  "id": 0,
-  "region": "string"
-}
+  {
+    "id": 0,
+    "region": "string"
+  }
 
 Response Body -> Response Status: 200 - OK
 
   {
-  "id": 0,
   "name": "string",
   "population": 0,
-  "region": "string"
+  "region": "string",
+  "countryName": "string"
   }
 ```
 
 ```
 Request -> DELETE - URL: http://localhost:8080/api/cities/delete/{id} (Id'ye göre City siler.)
 Request Body -> (Required)
-{
-  "id": 0,
-}
+  {
+    "id": 0
+  }
 
 Response Body -> Response Status: 200 - OK
 
